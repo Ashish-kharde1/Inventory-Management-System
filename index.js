@@ -17,7 +17,7 @@ app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname)));
 
 // Serve login page for admin and user pages without proper authentication
-app.get(['/', '/admin.html', '/user.html'], (req, res) => {
+app.get(['/', '/admin.html', '/user.html'], (_req, res) => {
     res.sendFile(path.join(__dirname, 'login.html'));
 });
 
@@ -74,7 +74,7 @@ app.post('/save', (req, res) => {
 });
 
 // Fetch data from CSV
-app.get('/fetch-data', (req, res) => {
+app.get('/fetch-data', (_req, res) => {
     const filePath = path.join(__dirname, 'data', 'oil_data.csv');
     const results = [];
 
@@ -91,12 +91,12 @@ app.get('/fetch-data', (req, res) => {
 });
 
 // Serve admin.html directly
-app.get('/admin.html', (req, res) => {
+app.get('/admin.html', (_req, res) => {
     res.sendFile(path.join(__dirname, 'admin.html'));
 });
 
 // Serve view-data.html directly
-app.get('/view-data.html', (req, res) => {
+app.get('/view-data.html', (_req, res) => {
     res.sendFile(path.join(__dirname, 'view-data.html'));
 });
 
