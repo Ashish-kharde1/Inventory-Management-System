@@ -58,7 +58,7 @@ app.post('/save', (req, res) => {
     const { "product name": productName, "user name": userName, quantity, "customer name": customerName, "date and time": dateTime, price } = req.body;
 
     // Format the date and time to ISO format
-    const formattedDateTime = moment(dateTime).format('YYYY-MM-DD HH:mm:ss');
+    const formattedDateTime = moment(dateTime).format('YYYY-MM-DD & HH:mm:ss');
 
     const csvLine = `"${productName}","${userName}","${quantity}","${customerName}","${formattedDateTime}","${price}"\n`;
     const filePath = path.join(__dirname, 'data', 'oil_data.csv');
