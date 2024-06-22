@@ -74,7 +74,7 @@ app.post('/save', (req, res) => {
 });
 
 // Fetch data from CSV
-app.get('/fetch-data', (_req, res) => {
+app.get('/fetch-data', (req, res) => {
     const filePath = path.join(__dirname, 'data', 'oil_data.csv');
     const results = [];
 
