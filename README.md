@@ -3,7 +3,7 @@
 This project is a simple Oil Management System that allows users to log in, add data about oil products, and view the stored data. It features separate interfaces for admin and regular users. Admins have additional functionality to view the data stored in a CSV file.
 
 ## Deployed Link
-You can access the deployed application [here](https://inventory-management-system1-swfe.onrender.com).
+You can access the deployed application [https://inventory-management-system1-swfe.onrender.com](https://inventory-management-system1-swfe.onrender.com).
 
 ![QR Code](qr_code.png)
 
